@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <% message.forEach( (elm) => { %>
+        <p><%= elm.msg %></p>
+    <%}) %>
+    <form action="/register" method="POST">
+        <fieldset>
+            <label for="username">Username</label>
+            <br>
+            <input type="text" name="username">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="text" name="email">
+            <br>
+            <label for="age">Age</label>
+            <br>
+            <input type="number" name="age">
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password">
+            <br>
+            <label for="confirmPassword">Confirm password</label>
+            <br>
+            <input type="password" name="confirmPassword">
+            <br>
+        </fieldset>
+        <button>Register</button>
+    </form>
+    <p>Have an account? Login from <a href='/login'>here</a></p>
+</body>
+</html>
